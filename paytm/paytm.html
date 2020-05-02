@@ -1,0 +1,14 @@
+<div align="center">
+<form action="<?php echo $paytmurl ?>" method="post">
+<?php
+//echo "<pre>"; print_r($formArray); die;
+    foreach( $formArray as $k=>$v )
+    {
+   ?> <input type="hidden" name="<?php p($k) ?>" value="<?php p($v) ?>" />    <?php
+    }
+    ?>
+	<input type="submit" value="<?php print_string("sendpaymentbutton", "availability_paytm") ?>" />
+
+</form>
+
+</div>
